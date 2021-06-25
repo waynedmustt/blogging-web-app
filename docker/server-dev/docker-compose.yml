@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  quad_db:
+    image: postgres:12-alpine
+    container_name: quad_db_postgres
+    ports:
+      - "6000:5432"
+    expose:
+      - "5432"
+    environment: 
+      - POSTGRES_PASSWORD=change_me
+      - POSTGRES_USER=quad_blog_app
+      - POSTGRES_DB=quad_blog_app_db
